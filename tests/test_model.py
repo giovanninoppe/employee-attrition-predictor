@@ -1,6 +1,8 @@
+import os
+
 import joblib
 import pandas as pd
-import os
+
 
 def test_model_output():
     path = os.path.join("..", "models", "final_model.pkl")
