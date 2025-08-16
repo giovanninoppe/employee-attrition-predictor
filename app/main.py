@@ -60,7 +60,7 @@ class InputData(BaseModel):
 def predict(data: InputData):
     try:
         # Convert input data to a DataFrame
-        input_df = pd.DataFrame(data.model_dump())
+        input_df = pd.DataFrame([data.model_dump()])
         # Make prediction using the loaded model
         prediction = model.predict(input_df)
         # Return the prediction result
